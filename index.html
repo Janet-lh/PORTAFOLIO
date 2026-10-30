@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeth Lopez | Portafolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Oswald:wght@600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome & Lucide Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-cream-bg text-dark-text antialiased min-h-screen flex flex-col justify-between selection:bg-accent-red selection:text-white">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="w-full fixed top-0 left-0 z-50 bg-cream-bg/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            
+            <!-- Navegación Izquierda -->
+            <nav class="hidden md:flex items-center space-x-8 font-condensed tracking-wider text-lg font-bold">
+                <a href="#about" class="hover:text-accent-red transition-colors">ABOUT ME</a>
+                <a href="#certificates" class="hover:text-accent-red transition-colors">CERTIFICATES</a>
+                <a href="#skills" class="hover:text-accent-red transition-colors">SKILLS</a>
+                <a href="#projects" class="hover:text-accent-red transition-colors">PROJECTS</a>
+            </nav>
+
+            <!-- Botón de Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none p-2" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Acción / Contacto Derecha -->
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-block font-condensed tracking-wider text-lg font-bold hover:text-accent-red transition-colors">
+                    CONTACT ME
+                </a>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-bg border-b border-black/10 px-6 py-4 flex flex-col space-y-3 font-condensed font-bold text-lg">
+            <a href="#about" class="mobile-link hover:text-accent-red">ABOUT ME</a>
+            <a href="#certificates" class="mobile-link hover:text-accent-red">CERTIFICATES</a>
+            <a href="#skills" class="mobile-link hover:text-accent-red">SKILLS</a>
+            <a href="#projects" class="mobile-link hover:text-accent-red">PROJECTS</a>
+            <a href="#contact" class="mobile-link hover:text-accent-red">CONTACT ME</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Réplica de la Imagen) -->
+    <section class="min-h-screen pt-28 pb-16 flex flex-col justify-center items-center relative px-4 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center justify-center relative">
+            
+            <!-- Welcome Cursive Accent -->
+            <span class="font-cursive-welcome text-accent-red text-6xl sm:text-7xl md:text-8xl lg:text-9xl relative z-10" style="margin-bottom:-0.12em;line-height:1;text-shadow:0 0 0.15em #F7F4EB, 0 0 0.3em #F7F4EB select-none font-bold transform -rotate-3">
+                welcome
+            </span>
+
+            <!-- PORTFOLIO Title -->
+            <h1 class="font-condensed-portfolio hero-title leading-none uppercase font-extrabold tracking-tight text-dark-text select-none">
+                PORTAFOLIO
+            </h1>
+
+            <!-- Badge & Social Links Container -->
+            <div class="flex items-center justify-center gap-4 sm:gap-6 mt-2 mb-8">
+                <!-- GitHub Icon -->
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-3xl sm:text-4xl text-dark-text hover:text-accent-red hover:scale-110 transition-all duration-200" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <!-- Center Pill Badge -->
+                <div class="bg-badge-bg/80 border border-dark-text/30 px-6 sm:px-10 py-2 sm:py-2.5 rounded-xl shadow-sm">
+                    <span class="font-sans text-xs sm:text-sm md:text-base font-semibold tracking-widest uppercase text-dark-text">
+                        BY JANETH LOPEZ
+                    </span>
+                </div>
+
+                <!-- LinkedIn Icon -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-3xl sm:text-4xl text-[#0A66C2] hover:scale-110 transition-all duration-200" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            <!-- Subtitle -->
+            <p class="font-sans text-xs sm:text-sm md:text-base font-semibold tracking-wider text-dark-text/80 uppercase max-w-2xl px-2">
+                MECHATRONIC ENGINEER | CYBERSECURITY &amp; NETWORK ENTHUSIAST
+            </p>
+        </div>
+
+        <!-- Decoración 3 Puntos en Esquina Inferior Derecha -->
+        <div class="absolute bottom-8 right-8 flex space-x-2">
+            <span class="w-3 h-3 bg-dark-text rounded-full"></span>
+            <span class="w-3 h-3 bg-dark-text rounded-full"></span>
+            <span class="w-3 h-3 bg-dark-text rounded-full"></span>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ABOUT ME -->
+    <section id="about" class="py-20 border-t border-dark-text/10 bg-cream-bg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="w-full h-80 sm:h-96 bg-badge-bg rounded-2xl border-2 border-dark-text overflow-hidden flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-user-gear text-8xl text-dark-text/30"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-accent-red text-white p-4 rounded-xl shadow-md font-condensed text-xl font-bold">
+                            5+ YEARS EXP.
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 inline-block">
+                        ABOUT ME
+                    </h2>
+                    <p class="text-base sm:text-lg leading-relaxed text-dark-text/80 font-normal">
+                        Hola, soy <strong class="text-dark-text">Janeth Lopez</strong>. Apasionada por la intersección entre la mecatrónica, el análisis de seguridad cibernética y la infraestructura de redes.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed text-dark-text/80 font-normal">
+                        Mi enfoque combina la automatización del hardware industrial con protocolos rigurosos de protección de red. Diseño e implemento soluciones eficientes e inexpugnables para entornos modernos.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-dark-text text-cream-bg px-6 py-3 rounded-xl font-bold hover:bg-accent-red transition-all">
+                            Contáctame
+                        </a>
+                        <a href="#" onclick="alert('Descargando Curriculum Vitae...')" class="border border-dark-text px-6 py-3 rounded-xl font-bold hover:bg-badge-bg transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-file-pdf"></i> Descargar CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SKILLS -->
+    <section id="certificates" class="py-20 bg-badge-bg/30 border-t border-dark-text/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
+                CERTIFICATES
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-badge-bg/40 p-6 rounded-2xl border border-dark-text/20 flex gap-4 items-start card-hover-effect">
+                    <div class="bg-accent-red/10 p-4 rounded-xl text-accent-red text-2xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Cisco Certified Network Associate (CCNA)</h3>
+                        <p class="text-sm text-dark-text/70">Cisco Systems • 2023</p>
+                        <p class="text-xs text-dark-text/60 mt-2">Redes de datos, enrutamiento, conmutación y fundamentos de seguridad.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="bg-badge-bg/40 p-6 rounded-2xl border border-dark-text/20 flex gap-4 items-start card-hover-effect">
+                    <div class="bg-accent-red/10 p-4 rounded-xl text-accent-red text-2xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">CompTIA Security+</h3>
+                        <p class="text-sm text-dark-text/70">CompTIA • 2023</p>
+                        <p class="text-xs text-dark-text/60 mt-2">Seguridad de la información, gestión de amenazas y criptografía.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="bg-badge-bg/40 p-6 rounded-2xl border border-dark-text/20 flex gap-4 items-start card-hover-effect">
+                    <div class="bg-accent-red/10 p-4 rounded-xl text-accent-red text-2xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Industrial Automation &amp; Robotics Specialization</h3>
+                        <p class="text-sm text-dark-text/70">Siemens Training Center • 2022</p>
+                        <p class="text-xs text-dark-text/60 mt-2">Programación de PLC S7-1500 y diseño de interfaces HMI.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="bg-badge-bg/40 p-6 rounded-2xl border border-dark-text/20 flex gap-4 items-start card-hover-effect">
+                    <div class="bg-accent-red/10 p-4 rounded-xl text-accent-red text-2xl">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Certified Ethical Hacker (CEH) - Basics</h3>
+                        <p class="text-sm text-dark-text/70">EC-Council • 2024</p>
+                        <p class="text-xs text-dark-text/60 mt-2">Evaluación de vulnerabilidades y seguridad defensiva en infraestructuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROJECTS -->
+    <section id="skills" class="py-20 bg-cream-bg border-t border-dark-text/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
+                SKILLS &amp; COMPETENCIES
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="bg-cream-bg p-8 rounded-2xl border border-dark-text/10 shadow-sm card-hover-effect">
+                    <div class="text-accent-red text-3xl mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="font-condensed text-2xl font-bold mb-4">MECATRÓNICA</h3>
+                    <ul class="space-y-2 text-sm text-dark-text/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> PLC Programming (Siemens/Allen-Bradley)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Robotics &amp; Embedded Systems</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> CAD Design (SolidWorks / AutoCAD)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Microcontrollers (Arduino, STM32)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="bg-cream-bg p-8 rounded-2xl border border-dark-text/10 shadow-sm card-hover-effect">
+                    <div class="text-accent-red text-3xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-condensed text-2xl font-bold mb-4">CYBERSECURITY</h3>
+                    <ul class="space-y-2 text-sm text-dark-text/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Network Security &amp; Firewalls</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Threat Analysis &amp; Mitigation</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Penetration Testing Basics</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Security Compliance (ISO 27001)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-cream-bg p-8 rounded-2xl border border-dark-text/10 shadow-sm card-hover-effect">
+                    <div class="text-accent-red text-3xl mb-4">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="font-condensed text-2xl font-bold mb-4">NETWORKING</h3>
+                    <ul class="space-y-2 text-sm text-dark-text/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Cisco CCNA Level Architecture</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> TCP/IP, VLANs, Routing &amp; Switching</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Wireshark Protocol Analysis</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-accent-red"></i> Industrial IoT Networks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CERTIFICATES -->
+    <section id="projects" class="py-20 bg-badge-bg/30 border-t border-dark-text/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
+                PROJECTS
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect">
+                    <div class="h-48 bg-badge-bg flex items-center justify-center relative">
+                        <i class="fa-solid fa-industry text-6xl text-dark-text/30"></i>
+                        <span class="absolute top-4 right-4 bg-dark-text text-cream-bg text-xs px-3 py-1 rounded-full uppercase font-bold">Mecatrónica</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-condensed text-2xl font-bold mb-2">Sistema SCADA &amp; IoT para Monitoreo Industrial</h3>
+                        <p class="text-sm text-dark-text/80 mb-4">
+                            Implementación de un sistema de supervisión distribuida en tiempo real con integración de sensores IoT e interfaz HMI segura.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">PLC Siemens</span>
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">Node-RED</span>
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">MQTT Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect">
+                    <div class="h-48 bg-badge-bg flex items-center justify-center relative">
+                        <i class="fa-solid fa-server text-6xl text-dark-text/30"></i>
+                        <span class="absolute top-4 right-4 bg-accent-red text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Ciberseguridad</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-condensed text-2xl font-bold mb-2">Auditoría de Red Industrial OT/IT</h3>
+                        <p class="text-sm text-dark-text/80 mb-4">
+                            Evaluación y segmentación de red para proteger los sistemas de producción frente a intrusiones externas mediante arquitectura Zero-Trust.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">Wireshark</span>
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">Palo Alto Firewalls</span>
+                            <span class="bg-badge-bg px-2.5 py-1 rounded-md">IEC 62443</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACT -->
+    <section id="contact" class="py-20 bg-cream-bg border-t border-dark-text/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-6 inline-block">
+                CONTACT ME
+            </h2>
+            <p class="text-dark-text/80 mb-8 max-w-lg mx-auto">
+                ¿Tienes un proyecto en mente o te interesa colaborar? Envíame un mensaje y nos pondremos en contacto pronto.
+            </p>
+
+            <form id="contact-form" class="space-y-4 text-left max-w-xl mx-auto">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Nombre</label>
+                    <input type="text" required="" placeholder="Tu Nombre" class="w-full bg-badge-bg/40 border border-dark-text/20 p-3 rounded-xl focus:outline-none focus:border-accent-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Correo Electrónico</label>
+                    <input type="email" required="" placeholder="tu@email.com" class="w-full bg-badge-bg/40 border border-dark-text/20 p-3 rounded-xl focus:outline-none focus:border-accent-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider mb-2">Mensaje</label>
+                    <textarea rows="4" required="" placeholder="Escribe tu mensaje aquí..." class="w-full bg-badge-bg/40 border border-dark-text/20 p-3 rounded-xl focus:outline-none focus:border-accent-red"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-dark-text text-cream-bg font-bold py-3.5 rounded-xl hover:bg-accent-red transition-all shadow-md">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-dark-text/10 bg-cream-bg text-center text-xs text-dark-text/60">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>© <span id="year">2026</span> Janeth Lopez. Todos los derechos reservados.</p>
+            <div class="flex space-x-6 text-base">
+                <a href="https://github.com" target="_blank" class="hover:text-accent-red" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-accent-red" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD & DESCARGA -->
+    <script src="script.js"></script>
+
+</body></html>
