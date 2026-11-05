@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth"><head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janeth Lopez | Portafolio</title>
@@ -12,6 +13,7 @@
     <!-- FontAwesome & Lucide Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-cream-bg text-dark-text antialiased min-h-screen flex flex-col justify-between selection:bg-accent-red selection:text-white">
@@ -35,6 +37,9 @@
 
             <!-- Acción / Contacto Derecha -->
             <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="text-xl p-2 rounded-full hover:text-accent-red transition-colors" aria-label="Cambiar modo claro/oscuro" title="Modo oscuro / claro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <a href="#contact" class="hidden sm:inline-block font-condensed tracking-wider text-lg font-bold hover:text-accent-red transition-colors">
                     CONTACT ME
                 </a>
@@ -51,7 +56,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (Réplica de la Imagen) -->
+    <!-- HERO SECTION -->
     <section class="min-h-screen pt-28 pb-16 flex flex-col justify-center items-center relative px-4 overflow-hidden">
         <div class="max-w-4xl mx-auto text-center flex flex-col items-center justify-center relative">
             
@@ -64,6 +69,9 @@
             <h1 class="font-condensed-portfolio hero-title leading-none uppercase font-extrabold tracking-tight text-dark-text select-none">
                 PORTAFOLIO
             </h1>
+            <p class="font-condensed text-xl sm:text-2xl font-bold tracking-wider mt-2 mb-2" style="min-height:1.6em">
+                <span id="typed-text" class="text-accent-red"></span><span class="typed-cursor">|</span>
+            </p>
 
             <!-- Badge & Social Links Container -->
             <div class="flex items-center justify-center gap-4 sm:gap-6 mt-2 mb-8">
@@ -136,7 +144,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN SKILLS -->
+    <!-- SECCIÓN CERTIFICATES -->
     <section id="certificates" class="py-20 bg-badge-bg/30 border-t border-dark-text/10">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
@@ -195,7 +203,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROJECTS -->
+    <!-- SECCIÓN SKILLS -->
     <section id="skills" class="py-20 bg-cream-bg border-t border-dark-text/10">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
@@ -248,7 +256,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN CERTIFICATES -->
+    <!-- SECCIÓN PROJECTS -->
     <section id="projects" class="py-20 bg-badge-bg/30 border-t border-dark-text/10">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="font-condensed text-4xl sm:text-5xl font-bold tracking-wide border-b-2 border-accent-red pb-2 mb-12 inline-block">
@@ -257,7 +265,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect">
+                <div id="scada-card" class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect" role="button" tabindex="0" aria-haspopup="dialog">
                     <div class="h-48 bg-badge-bg flex items-center justify-center relative">
                         <i class="fa-solid fa-industry text-6xl text-dark-text/30"></i>
                         <span class="absolute top-4 right-4 bg-dark-text text-cream-bg text-xs px-3 py-1 rounded-full uppercase font-bold">Mecatrónica</span>
@@ -272,11 +280,12 @@
                             <span class="bg-badge-bg px-2.5 py-1 rounded-md">Node-RED</span>
                             <span class="bg-badge-bg px-2.5 py-1 rounded-md">MQTT Security</span>
                         </div>
+                        <p class="scada-more"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Ver más detalles</p>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect">
+                <div id="ot-card" class="bg-cream-bg rounded-2xl border border-dark-text/10 overflow-hidden shadow-sm card-hover-effect" role="button" tabindex="0" aria-haspopup="dialog">
                     <div class="h-48 bg-badge-bg flex items-center justify-center relative">
                         <i class="fa-solid fa-server text-6xl text-dark-text/30"></i>
                         <span class="absolute top-4 right-4 bg-accent-red text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Ciberseguridad</span>
@@ -291,6 +300,7 @@
                             <span class="bg-badge-bg px-2.5 py-1 rounded-md">Palo Alto Firewalls</span>
                             <span class="bg-badge-bg px-2.5 py-1 rounded-md">IEC 62443</span>
                         </div>
+                        <p class="scada-more"><i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Ver más detalles</p>
                     </div>
                 </div>
             </div>
@@ -307,7 +317,7 @@
                 ¿Tienes un proyecto en mente o te interesa colaborar? Envíame un mensaje y nos pondremos en contacto pronto.
             </p>
 
-            <form id="contact-form" class="space-y-4 text-left max-w-xl mx-auto">
+            <form onsubmit="event.preventDefault(); this.reset(); alert('¡Gracias por tu mensaje! Me pondré en contacto contigo a la brevedad.');" class="space-y-4 text-left max-w-xl mx-auto">
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-wider mb-2">Nombre</label>
                     <input type="text" required="" placeholder="Tu Nombre" class="w-full bg-badge-bg/40 border border-dark-text/20 p-3 rounded-xl focus:outline-none focus:border-accent-red">
@@ -338,7 +348,112 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE INTERACTIVIDAD & DESCARGA -->
-    <script src="script.js"></script>
+    <!-- MODAL: Detalle del proyecto SCADA & IoT -->
+    <div id="scada-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="scada-modal-title">
+        <div class="project-modal__backdrop"></div>
+        <div class="project-modal__panel">
+            <button id="scada-modal-close" class="project-modal__close" aria-label="Cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
+            <div class="scada-media">
+                <i class="fa-solid fa-industry text-6xl text-dark-text/30"></i>
+                <span class="absolute top-4 right-4 bg-dark-text text-cream-bg text-xs px-3 py-1 rounded-full uppercase font-bold">Mecatrónica</span>
+            </div>
+            <h3 id="scada-modal-title" class="font-condensed text-3xl font-bold mb-2">Sistema SCADA & IoT para Monitoreo Industrial</h3>
+            <p class="scada-lead mb-2">
+                Sistema de supervisión distribuida en tiempo real diseñado para plantas industriales, con adquisición de datos de sensores IoT, comunicación segura por MQTT y una interfaz HMI accesible desde cualquier punto de la red.
+            </p>
 
-</body></html>
+            <h4 class="scada-section-title">OBJETIVO DEL PROYECTO</h4>
+            <p class="scada-lead">
+                Centralizar el monitoreo de variables críticas (temperatura, presión, consumo energético y estado de las máquinas) para detectar fallas a tiempo y reducir los tiempos de paro no programados.
+            </p>
+
+            <h4 class="scada-section-title">ARQUITECTURA DEL SISTEMA</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>PLC Siemens S7-1200 como capa de control a nivel de campo.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Pasarela industrial con Node-RED para recolectar y transformar los datos de los sensores.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Broker MQTT con autenticación TLS y control de acceso por tópicos.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Dashboard HMI web con alarmas, históricos y tendencias en tiempo real.</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">FUNCIONALIDADES CLAVE</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>Monitoreo remoto 24/7 con actualización de datos en segundos.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Sistema de alarmas con niveles de criticidad y notificaciones.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Registros históricos para análisis predictivo y mantenimiento.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Comunicación cifrada de extremo a extremo (seguridad OT).</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">RESULTADOS</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>Reducción de los tiempos de respuesta ante fallas en la planta.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Visibilidad completa del estado de la producción desde un solo panel.</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">TECNOLOGÍAS UTILIZADAS</h4>
+            <div class="scada-tags">
+                <span class="scada-tag">PLC Siemens</span>
+                <span class="scada-tag">Node-RED</span>
+                <span class="scada-tag">MQTT Security</span>
+                <span class="scada-tag">HMI Web</span>
+                <span class="scada-tag">TLS/SSL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Detalle del proyecto Auditoría de Red Industrial OT/IT -->
+    <div id="ot-modal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="ot-modal-title">
+        <div class="project-modal__backdrop"></div>
+        <div class="project-modal__panel">
+            <button class="project-modal__close" aria-label="Cerrar ventana"><i class="fa-solid fa-xmark"></i></button>
+            <div class="scada-media">
+                <i class="fa-solid fa-server text-6xl text-dark-text/30"></i>
+                <span class="absolute top-4 right-4 bg-accent-red text-white text-xs px-3 py-1 rounded-full uppercase font-bold">Ciberseguridad</span>
+            </div>
+            <h3 id="ot-modal-title" class="font-condensed text-3xl font-bold mb-2">Auditoría de Red Industrial OT/IT</h3>
+            <p class="scada-lead mb-2">
+                Auditoría integral de una red industrial orientada a identificar riesgos en la convergencia de las redes OT e IT, y a proteger los sistemas de producción frente a intrusiones externas.
+            </p>
+
+            <h4 class="scada-section-title">OBJETIVO DEL PROYECTO</h4>
+            <p class="scada-lead">
+                Evaluar la seguridad de la red de planta, detectar puntos de acceso no controlados entre las redes OT e IT y proponer una arquitectura de segmentación y control Zero-Trust.
+            </p>
+
+            <h4 class="scada-section-title">ALCANCE DEL TRABAJO</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>Levantamiento topológico de la red industrial y mapeo de activos OT.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Captura y análisis de tráfico con Wireshark para identificar comunicaciones anómalas.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Evaluación de políticas de firewall con equipos Palo Alto.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Revisión de cumplimiento de la norma IEC 62443.</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">MEDIDAS IMPLEMENTADAS</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>Segmentación de la red mediante zonas y conductos (modelo Purdue).</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Arquitectura Zero-Trust con acceso verificado por identidad y contexto.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Reglas de filtrado entre redes IT y OT con registro de eventos.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Plan de monitoreo continuo y respuesta a incidentes para la planta.</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">RESULTADOS</h4>
+            <ul class="scada-list">
+                <li><i class="fa-solid fa-check"></i><span>Reducción de la superficie de ataque hacia los sistemas de producción.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Traza completa de las comunicaciones entre redes IT y OT.</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Hoja de ruta de ciberseguridad industrial alineada a IEC 62443.</span></li>
+            </ul>
+
+            <h4 class="scada-section-title">TECNOLOGÍAS UTILIZADAS</h4>
+            <div class="scada-tags">
+                <span class="scada-tag">Wireshark</span>
+                <span class="scada-tag">Palo Alto Firewalls</span>
+                <span class="scada-tag">IEC 62443</span>
+                <span class="scada-tag">Zero-Trust</span>
+                <span class="scada-tag">Segmentación de Red</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript Externo -->
+    <script src="script.js" defer></script>
+</body>
+</html>
